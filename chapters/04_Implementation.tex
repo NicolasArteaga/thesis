@@ -1,15 +1,20 @@
 \chapter{Implementation}
 \label{sec:implementation}
 
-\section{Automata}
+\section{Starting Automata v0}
 TODO What we learned when we created the automata and the simple function that we are gonna use for data collection.
+\subsection{Its Parameters/Features}
+
+%Make this small
 
 \subsection{Sugar Amount}\label{subsec:sugar-amount}
-To calibrate the sugar dispensing system, we measured ten times the amount of sugar released over durations of 0.5s, 1s, 1.5s and 2s (2s slightly overflowed the spoon)with each setting tested in multiple trials. The resulting median values were 8.50g, 12.63g, and 16.64g, 20.58g respectively. These findings confirmed a roughly linear relationship between dispensing duration and sugar quantity. For all subsequent trials and modeling efforts, we standardized the input to 1s of sugar dispensing so 12.63g.
+To calibrate the sugar dispensing system, we measured the mass of sugar released over dispensing durations of 0.5s, 1s, 1.5s and 2s, with ten trials conducted at each setting (noting that 2 s slightly overflowed the spoon). The resulting median amounts dispensed were 8.50g, 12.63g, and 16.64g, 20.58g, respectively. These findings confirmed a roughly linear relationship between dispensing duration and sugar quantity. For all subsequent trials and modeling, we standardized the input to 1s of sugar dispensing (12.63g).
 
 \subsection{Waiting Time}
-The time the robot arm waits until sugar starts flowing out of the spinner. The cold start time was a variable used for the first time (102s) with an environment of ~25C, our digital twin will leave this variable unneeded. Since it will already know how to act with the actual temperature of the spinner.
-At the end of the thesis we will see the variance of this time, based mostly on how warm the spinner will be before.
+Waiting time refers to how long the robot arm has to wait until sugar starts coming out of the head. The cold-start time was a variable used for the first time (102s) with an environment temperature of ~25°C. 
+
+%dont spoil
+In the digital twin implementation, this parameter is not required, as the model incorporates the actual spinner temperature to predict flow onset directly. Variability in waiting time, primarily influenced by the preheating state of the spinner, is analyzed in the final section of this thesis.
 
 \subsection{Cooking Time}
 The default cooking time is 105s. This starts once the sugar starts flowing out of the spinner. probably becauase the spinner has reached the desired temperature for more than (10-20 seconds). (TODO: Be sure about this)
@@ -17,19 +22,21 @@ The spinning time is always 3.75s.
 105/3.75 = 28 spins per run.
 
 \subsection{Cooldown Time}
-The cooldown time is the time that the spinner runs without the heat, to cool down after the production run. This is needed to avoid burning the sugar in the next run. The default cooldown time is 60s, but we are gonna research how good the quality is gonna be if we increase or decrease this value. 
-The Machine manual empfehlen to wait 120s, but we started with 60s bc we noticed a lot room for improvement while using the automata and sometimes it takes a long time to start the next process again to put the sugar and turnon the machien again makes it roughly 120s anyway.
+The cooldown time refers to the period during which the spinner runs without heating in order to cool down after the production run. This step prevents the sugar from burning in subsequent runs. A default cooldown time of 60s was applied. However, we are gonna investigate the effect of increasing or decreasing this value on product quality. The machine manual recommends a cooldown time of 120 s. We adopted the shorter interval of 60 s because, in practice, the operational cycle of refilling sugar and restarting the machine often extends the total interval to approximately 120 s.
 
-\subsection{Cotton Candy iteration}
-We are gonna store which cotton candy iteration we are on, since the last time the machine has been cleaned. We already noticed what a big difference it can make on the quality when the machine has run for a long time without cleaning. 
-We want to find the optimal value of iterations we want to run before cleaning the machine. We will start with max 20 iterations.
-We will clean the machine and declog the sugar of the spinner with water.
+\subsection{Cotton Candy Maintenance Iteration}
+We record the number of cotton candy production iterations completed since the last maintenance of the machine. Preliminary observations indicate that extended operation without maintenance has a noticeable impact on product quality. The objective is to determine the optimal number of iterations that can be performed before maintenance is required. In this study, we begin with a maximum of 60 iterations. Maintenance involves removing residual sugar and unclogging the spinner using water.
 
 
-\section{Energy Consumption Measurement}
+
+\section{Automata v1 and automatic Quality Score Implementation}
+We need the parameters for the quality score
+\subsection{Automatic Quality Score}
+\subsection{Time-Efficiency}
+\subsection{Energy Consumption Measurement}
 \label{sec:energy-measurement}
 
-Energy consumption is measured and stored for each production cycle to enable optimization of process parameters for energy efficiency. This measurement, combined with quality metrics, allows the digital twin system to find optimal parameter settings that minimize energy consumption while maintaining product quality.
+Energy consumption is recorded for each production cycle to enable optimization of process parameters for energy efficiency. These measurements, combined with quality metrics, allow the digital twin system to identify optimal parameter settings that minimize energy usage while preserving product quality.
 
 \subsection{Data Acquisition and Calculation}
 
@@ -39,9 +46,9 @@ Power consumption is measured using a smart plug at 2-second intervals throughou
 E = \sum_{i=1}^{n} \frac{P_{i-1} + P_i}{2} \cdot \Delta t_i
 \]
 
-where $P_i$ is the power measurement at time $t_i$ and $\Delta t_i$ is the time interval between measurements. The result is converted from Watt-seconds to Watt-hours for practical interpretation of the 5-minute production cycles.
+where $P_i$ is the power measurement at time $t_i$ and $\Delta t_i$ is the time interval between measurements. The resulting value is converted from Watt-seconds to Watt-hours for practical interpretation of the 5-minute production cycles.
 
-This methodology captures energy consumption across all production phases (startup, heating, spinning, cooldown) and provides the optimization target for energy-efficient cotton candy production.
+This methodology accounts for energy consumption across all production phases (startup, heating, spinning, and cooldown) and provides the optimization target for energy-efficient cotton candy production.
 
 % \subsection{Power Data Acquisition}
 % 
@@ -107,7 +114,7 @@ This methodology captures energy consumption across all production phases (start
 
 The input mass of sugar for each production run was manually measured using a precision scale with a readability of 0.01 grams. To determine the output mass of the produced cotton candy, the final product (including the stick) was weighed immediately after production using the same scale. The net weight of the cotton candy was then computed by subtracting the known weight of the stick, which was measured prior to the experiment and kept constant across all runs.
 
-Accurate weight measurement was essential for evaluating the amount of produced cotton candy and for computing derived metrics such as the quality and Fluffiness Index. All weights were recorded in grams with a precision of two decimal places.
+Accurate weight measurement was essential for evaluating the amount of produced cotton candy and for computing derived metrics such as the quality and Fluffiness Index. All weight measurements were recorded in grams with a precision of two decimal places.
 
 
 
@@ -175,6 +182,29 @@ This index serves as a proxy for the density of the cotton candy, with higher va
 \subsection{Limitations in Volume Measurement}
 
 The estimation of cotton candy volume relied on manual measurements of width and height, followed by geometric approximation. While this method provides a reasonable basis for comparative analysis, it is subject to several limitations: (a) the inherently irregular and fragile structure of cotton candy, (b) potential observer bias during manual measurement, and (c) the assumption of a regular geometric shape. As such, the absolute values of estimated volume should be interpreted with caution. However, because the same procedure was applied uniformly across all experimental runs, the relative differences and trends derived from this method remain valid for assessing the effects of the digital twin optimization.
+
+
+\section{Data Collection \& Analysis}
+Cite a little table showing the data we extracted from a process -> then the features and target we are building, etc...
+
+\section{Automata v2}
+From what we learned in the Data Analysis from before. We stop looking it as cooldown\_time, ... etc and start looking at the temp of IRO as the top indicator/Changer to improve quality. We tweak the implementation, fragment more the bpm so that the process can cool itself down before starting, because of the importancy and correlation of cooldown\_temp / start\_temp
+
+The new process looks like this 
+BPM Process
+\subsection{Data Collection, Data Cleaning of the old logs \& Analysis}
+\subsection{Creation of our Temp Values Model}
+Did we use RandomForest or Decision Tree or Regression?
+
+
+
+
+\section{Automata v3 Our first Digital Twin}
+What is different in the implementation? Basically now we have a service with a model. In the next chapter we are gonna evaluate this final version with the v0 automata.
+
+\subsection{Prescription Part (No time)}
+
+
 
 \section{Pressure Functions}
 Here I want to briefly show the pressure funcs we get from the scale and our implemented function, and why we decided not to use them (spoiler: To little time)

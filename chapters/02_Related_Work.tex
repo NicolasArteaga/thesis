@@ -1,55 +1,107 @@
 \chapter{Related Work}
 \label{sec:rel}
 
-Related Work - There is a girl with long dark hair doing a thesis on digital twin as a research analysis. ask her per discord
+This chapter reviews related work that informs the development of a prescriptive, data-driven digital twin for the Cotton Candy Automata. The discussion is structured around three areas: (1) the conceptual foundations of digital twins, (2) the results and discussion of our literature search on digital twins, and (3) the physicochemical background of cotton candy. To ensure transparency, we include the full literature search procedure and selection results.
 
-google scholar in-title digital twin / business processes, search queries that give you less than 20 papers and decide 1 or 2 papers in the end. How many papers did we eliminate? why? bc too
+\section*{Conceptual Foundations of Digital Twins}
+VanDerHorn and Mahadevan \cite{VANDERHORN2021113524} reviewed more than forty definitions of digital twins and proposed a consolidated characterization distinguishing them from digital models and digital shadows. Their work highlights the essential elements of a DT: a physical system, a virtual representation, and continuous data exchange between the two. While this definition provides conceptual clarity, it leaves open the question of how to realize DTs in practice, particularly in small-scale or experimental domains.
 
-backgorund 1-2 sentences
--> Why am I doing something different to this related work
+Perno et al.\ \cite{PERNO2022103558} addressed implementation challenges in the process industry. They identified barriers such as interoperability, sensor reliability, and data quality, as well as organizational enablers like management support and standardization. These insights underscore the practical difficulties of creating robust DTs but do not provide concrete examples of small-scale implementations. In contrast, our thesis contributes an empirical case where sensor reliability and data quality are directly confronted in a novel food-production setting.
 
-Final max 4-5 papers that really relate to what Im doing
+Kreuzer et al.\ \cite{KREUZER2024102304} performed a systematic literature review on artificial intelligence in DTs and found that most works neglect real-time data, bidirectional feedback, and explainability. These gaps motivate the approach in this thesis, which builds a bottom-up DT explicitly designed to integrate real-time sensor data and prescriptive feedback loops.
 
+\section*{Literature Search for Digital Twins}
+To identify digital twin methods relevant to business processes and prescriptive capabilities, we conducted a structured search on Google Scholar using the operator \texttt{allintitle}. The search and filtering followed a three-step procedure applied to both the digital twin and cotton candy queries:
 
-THis one doesnt work bc, its for bridges and civil engineering
-https://www.sciencedirect.com/science/article/pii/S0141029623017984
+\begin{itemize}
+    \item \textbf{Step 1 (S1) – Title Screening:} Titles were inspected to exclude papers clearly out of scope (e.g., purely visualization-oriented, domain-specific without transferable methods, or not addressing digital twins at all).
+    \item \textbf{Step 2 (S2) – De-duplication and Access Check:} Duplicates were removed, and inaccessible papers were excluded.
+    \item \textbf{Step 3 (S3) – Abstract Skim:} Abstracts (and figures where available) were skimmed to exclude purely theoretical works without models, examples, or process-level analysis.
+\end{itemize}
 
-this one looks good :
-https://www.sciencedirect.com/science/article/pii/S0360835224003620
-
-\section{Thermal Study on Cotton Candy}
-Cotton candy consists of spun sucrose that cools rapidly, forming a mostly amorphous structure — but:
-	•	Over time, this amorphous state can convert into crystalline form.
-	•	The ratio between crystalline and amorphous sucrose affects:
-	•	Texture
-	•	Stability
-	•	Taste
-	•	Shelf-life
-
-% The paper investigates how the physical structure of cotton candy changes depending on how it is produced and stored, focusing especially on how much is amorphous vs crystalline sucrose.
-% 	•	The author studies this using Differential Scanning Calorimetry (DSC), a thermal analysis technique to measure transitions like glass transitions, crystallization, and melting.
-% 	•	The novelty: the study compares cotton candy spun in air vs in nitrogen atmosphere to see how different gas environments affect its physical and thermal properties.
-
-% In essence, it’s a study of the physics of sugar in cotton candy — very relevant to your Cotton Candy Automata project, as this kind of data gives insight into the material side of your digital twin.
-
-This paper provides very solid experimental data on how production parameters influence the physical structure (crystalline vs amorphous) of cotton candy.
-
-Crystalline is \dots
-Amorphous is \dots
-
-% Because the amorphous vs crystalline ratio affects:
-% 	•	Shelf life (amorphous recrystallizes over time)
-% 	•	Stability (stickiness, collapse, hardening)
-% 	•	Thermal behavior (different melting/glass transition points)
-% 	•	Quality (texture, mouthfeel)
-
-Knowing how production parameters (like gas environment) affect structure can inform optimal production recipes. We are not gonna compare CCA vs CCN, since we are always using Normal Air but
-We learn about the importance of humidity, and want to use it for our Data Recollection since this is important For the Prescriptive twin design.
-
-This helps with us taking the decision how to measure the quality of CC when doing data recollection and giving a note to the process.
-
-What makes it difficult is that the changes are fine and little, and we dont really know if we are gonna be able to distinguish them, but we did research and will introducte this in the Solution Design.
-
-% Smooth operatoooor
+Most results were excluded for focusing solely on visualization, lacking process-level applicability, or remaining purely conceptual. The complete results are shown in Table~\ref{tab:litsearch-dt}, with only four papers retained as directly relevant.
 
 
+\begin{table}[h!]
+  \begin{center}
+    \caption{Literature search results for Digital Twin (allintitle).}
+    \label{tab:litsearch-dt}
+    \begin{tabular}{l|c|c|c|c|c}
+      \textbf{Search Term} & \textbf{Results} & \textbf{S1} & \textbf{S2} & \textbf{S3} & \textbf{Rel.} \\
+      \hline
+      ``digital twin'' ``business process''                       & 14 & 4 & 3 & 3 &   \\
+      ``digital twins'' ``business processes''                    & 6  & 1 & 1 & 1 & \cite{FORNARI2025101477} \\
+      ``business process digital twin''                           & 2  & 1 & 0 &   &   \\
+      ``digital twin'' ``business process'' ``implementation''    & 1  & 1 & 0 &   &   \\
+      ``digital twin'' ``business process'' ``framework''         & 0  &   &   &   &   \\
+      ``digital twin'' ``business process management''            & 1  & 0 &   &   &   \\
+      ``digital twin'' ``process industry''                       & 17 & 0 &   &   &   \\
+      ``digital twin'' ``feedback loop''                          & 1  & 0 &   &   &   \\
+      ``digital twin'' ``candy''                                  & 0  &   &   &   &   \\
+      ``digital twin'' ``cotton candy''                           & 0  &   &   &   &   \\
+      ``digital twin'' ``process mining''                         & 13 & 3 & 3 & 1 & \cite{10716255} \\
+      ``digital shadow'' ``business process''                     & 0  &   &   &   &   \\
+      ``digital twin'' ``data-driven'' ``process''                & 13 & 1 & 1 & 1 & \cite{8622412} \\
+      ``digital twin'' ``prescriptive''                           & 11 & 3 & 3 & 1 & \cite{WALTON2024110241} \\
+      ``digital twin'' ``bidirectional''                          & 8  & 2 & 1 & 0 &   \\
+      ``digital twin'' ``real-time control''                      & 17 & 0 &   &   &   \\
+      ``digital twin'' ``artificial intelligence'' ``literature review'' & 3 & 3 & 3 & 1 &   \\
+      ``digital twin'' ``artificial intelligence'' ``model''      & 10 & 1 & 1 & 0 &   \\
+      ``digital twin'' ``explainable ai''                         & 12 & 1 & 1 & 0 &   \\
+      ``digital twin'' ``machine learning'' ``prescriptive''      & 0  &   &   &   &   \\
+      \hline
+      \textbf{Sum}                                                & \textbf{129} & \textbf{21} & \textbf{17} & \textbf{8} & \textbf{4} \\
+    \end{tabular}
+  \end{center}
+  \floatfoot{\textit{Selection Steps:} 
+    S1 = title screening, 
+    S2 = duplicate removal and access check, 
+    S3 = abstract skim. 
+    The \textbf{Sum} row reports the number of articles remaining after each step.}
+\end{table}
+
+\section*{Discussion of Relevant Works}
+The following four papers were retained after the selection process:
+
+\begin{itemize}
+  \item \textbf{Fornari et al.\ \cite{FORNARI2025101477}}: The ``Digital Twins of Business Processes'' manifesto provides a research agenda, highlighting challenges such as model-execution alignment, integration of runtime data, and prescriptive capabilities. Our thesis differs by operationalizing these ideas in practice, demonstrating a real-time prescriptive DT in a robotic food production process.
+  \item \textbf{Vitale et al.\ \cite{10716255}}: This work combines process mining and DTs for anomaly detection in water distribution networks. While methodologically similar in its bottom-up data use, it focuses on large-scale industrial infrastructure. In contrast, we apply the approach to small-batch food production, showing the generalizability of process mining concepts to new domains.
+  \item \textbf{Walton et al.\ \cite{WALTON2024110241}}: Proposes a unified DT architecture integrating physical, virtual, and prescriptive components. Unlike this framework-level contribution, our thesis demonstrates a physical implementation where prescriptive recommendations directly optimize process outcomes.
+  \item \textbf{Stojanovic and Milenovic \cite{8622412}}: Among the first to propose explicitly data-driven DTs, focusing on big data clustering for laser cutting optimization. Their approach is unsupervised and anomaly-oriented. Our work advances this by implementing a supervised, sensor-driven, and prescriptive DT in a food context.
+\end{itemize}
+
+These works highlight both the potential and the limitations of current digital twin research. In particular, they motivate Research Question~3 (see Section~\ref{sec:intro:rq}), which asks whether a prescriptive DT can provide actionable recommendations in a small-batch food production setting.
+
+\section*{An Alternative Approach}
+Some works excluded at Step~3 still highlight important alternative perspectives. For example, Giussani et al.\ \cite{11015088} embed a Digital Twin of the Organization into BPMN (Business Process Model and Notation: a standard notation for modeling business processes) processes to enable pre-implementation simulation and runtime adaptation. This model-driven, top-down orientation contrasts with our bottom-up, sensor-driven approach, reinforcing the novelty of applying empirical, data-driven methods to DT development.
+
+\section*{Physicochemical Background of Cotton Candy}
+Although digital twins have not yet been applied to cotton candy production, existing food science research provides an essential foundation for interpreting process data. To identify relevant studies, we conducted a targeted literature search using the same three-step procedure as in the digital twin review, but with the operator \texttt{intitle} due to the limited number of publications on cotton candy. The results of this search are summarized in Table~\ref{tab:litsearch-cc}. Labuza \cite{labuza} demonstrated how temperature and relative humidity trigger glass transition and recrystallization, which ultimately determine collapse and stability. Terashima \cite{TERASHIMA2022139953} extended this work using differential scanning calorimetry, analyzing how cooking conditions influence crystalline and amorphous states of spun sugar. Together, these studies underline why humidity and temperature are critical factors: they directly affect the durability and quality of the spun product.
+
+Building on these insights, our thesis integrates physicochemical knowledge into the design of the digital twin. The findings informed both our interpretation of humidity and temperature sensor data and the way we translated thresholds into predictors of collapse and quality outcomes. This connection between physicochemical mechanisms and process behavior directly motivates Research Question~2 (see Section~\ref{sec:intro:rq}), which examines how correlations between variables such as humidity, temperature, and production quality can be identified and modeled in the cotton candy process.
+
+\begin{table}[h!]
+  \centering
+  \caption{Literature search results for Cotton Candy Physicochemical Background (\texttt{intitle}).}
+  \label{tab:litsearch-cc}
+  \begin{tabular}{l|c|c|c|c|c}
+    \textbf{Search Term} & \textbf{Results} & \textbf{S1} & \textbf{S2} & \textbf{S3} & \textbf{Rel.} \\
+    \hline
+    ``cotton candy'' ``humidity''          & 5  & 3 & 2 & 2 & \cite{labuza}, \cite{TERASHIMA2022139953} \\
+    ``cotton candy'' ``temperature''       & 25 & 3 & 1 & 0 &   \\
+    ``cotton candy'' ``crystallization''   & 9  & 2 & 0 &   &   \\
+    ``cotton candy'' ``stability''         & 12 & 2 & 0 &   &   \\
+    ``cotton candy'' ``quality''           & 16 & 2 & 0 &   &   \\
+    ``cotton candy'' ``food engineering''  & 1  & 1 & 0 &   &   \\
+    \hline
+    \textbf{Sum} & \textbf{68} & \textbf{13} & \textbf{3} & \textbf{2} & \textbf{2} \\
+  \end{tabular}
+  \floatfoot{\textit{Selection Steps:} 
+    S1 = title screening, 
+    S2 = duplicate removal and access check, 
+    S3 = abstract skim. 
+    The \textbf{Sum} row reports the number of articles remaining after each step.}
+\end{table}
+
+\section*{Synthesis}
+The reviewed literature reveals three clear gaps. First, conceptual clarity exists, but practical small-scale DT implementations remain rare. Second, prescriptive DTs are proposed architecturally but seldom realized in practice. Third, food science research on cotton candy explains physicochemical behavior but does not connect to data-driven optimization. By integrating these threads, this thesis contributes a prescriptive, bottom-up digital twin that combines sensor data, process mining, and food science insights to optimize a tangible robotic production process.

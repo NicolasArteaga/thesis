@@ -4,27 +4,22 @@
 \section{Motivation}
 \label{sec:intro:mo}
 
-As industries evolve, the ability to optimize processes while minimizing waste has become increasingly important. Digital twins—virtual representations of physical systems—are transforming how processes can be monitored, analyzed, and improved. While reactive digital twins respond to events as they occur, providing immediate yet limited feedback, predictive digital twins forecast potential outcomes based on historical and real-time data, enabling proactive adjustments. A more recent frontier is the prescriptive digital twin, which goes beyond prediction by recommending concrete actions to achieve goals such as improving efficiency, reducing energy consumption, or enhancing product quality.
+As industries evolve, the ability to optimize processes while minimizing waste has become increasingly important. Digital twins (virtual representations of physical systems) are transforming how processes can be monitored, analyzed, and improved. While reactive digital twins respond to events as they occur, providing immediate yet limited feedback, predictive digital twins forecast potential outcomes based on historical and real-time data, enabling proactive adjustments. A more recent frontier is the prescriptive digital twin, which goes beyond prediction by recommending concrete actions to achieve goals such as improving efficiency, reducing energy consumption, or enhancing product quality.
 
-This thesis explores the development of a prescriptive digital twin for the Cotton Candy Automata, a robotic system we will design at the chair to automate cotton candy production. The process provides a controlled and measurable environment in which to evaluate the capabilities of a digital twin, with key parameters such as heating time, temperature, process duration, sugar amount, and energy usage offering tangible performance indicators.
+This thesis explores the development of a prescriptive digital twin for the Cotton Candy Automata, a robotic system we designed at the Chair of Information Systems and Business Process Management from the TUM, to automate cotton candy production. The process provides a controlled and measurable environment in which to evaluate the capabilities of a digital twin, with key parameters such as heating time, temperature, process duration, sugar amount, and energy usage offering tangible performance indicators.
 
 The construction of the digital twin follows a bottom-up approach. Instead of starting from abstract models or historical approximations, we relied on physical measurements and sensor data from the automata. Through repeated experiments, we empirically identified parameters that govern the system's behavior and integrated them into the digital twin. This allowed us to directly model the causal impact of system configurations on outcomes, such as energy consumption, production time, and product quality.
 
-A central objective of this thesis is to compare the prescriptive digital twin to the baseline robotic system without intelligence we created (the “unintelligent automata”). This comparison highlights the extent to which a data-driven, bottom-up digital twin can improve operational efficiency and decision-making. By analyzing metrics such as energy savings, time efficiency, and production quality, the research demonstrates the potential of prescriptive digital twins to contribute to more sustainable and effective industrial processes.
-
-Ultimately, this work contributes to the broader understanding of how to design and implement prescriptive digital twins in practice. It shows how bottom-up methods—grounded in empirical data and real-time measurements—can be leveraged to transform physical processes into intelligent, self-optimizing systems.
+A central objective of this thesis is to compare the prescriptive digital twin to the simple baseline robotic system we created (the “unintelligent automata”). This comparison highlights the extent to which a data-driven, bottom-up digital twin can improve operational efficiency and decision-making. By analyzing metrics such as energy savings, time efficiency, and production quality, the research demonstrates the potential of prescriptive digital twins to contribute to more sustainable and effective industrial processes.
 
 \section{Research Questions}
 \label{sec:intro:rq}
-At least 3 questions. They should not be answerable yes/no. Questions should be
-questions (1 sentence). But you are allowed to explain them in more detail. In
-the explanation also tell how you plan to prove that your potential future
-solution is good.
-
-About 1 page.
-
-
--------------
+% At least 3 questions. They should not be answerable yes/no. Questions should be
+% questions (1 sentence). But you are allowed to explain them in more detail. In
+% the explanation also tell how you plan to prove that your potential future
+% solution is good.
+% About 1 page.
+% -------------
 
 There are four research questions that we want to answer throughout this thesis.
 
@@ -44,27 +39,29 @@ A digital twin is most valuable when its methods are not bound to a single techn
 
 \section{Contribution}
 \label{sec:intro:con}
+% What will/have I do/done that nobody else has done before. About 1/2 page.
 
-What will/have I do/done that nobody else has done before. About 1/2 page.
+The contributions of this thesis are as follows:
+\begin{itemize}
+    \item A literature review on the topic of Business Processes, Cotton Candy, and Digital Twins, situating this unusual case study within both technical and food-science domains.
+    \item The development of a Cotton Candy Automata operated by a Universal Robots arm, providing a reproducible physical system for experimentation.
+    \item The development of a Cotton Candy Digital Twin that controls, predicts, and prescribes to the Automata. This represents, to the best of our knowledge, the first attempt to model cotton candy production as a cyber-physical process, thereby extending digital twin principles into an entirely new domain.
+    \item A documentation of the implementation of the System in its different versions, including the architecture of the systems and services as well as their communication protocols.
+    \item A systematic documentation of the data collection process for cotton candy production, ensuring transparency and reproducibility.
+    \item An analysis of the collected data using machine learning models, highlighting predictive features and demonstrating how quality outcomes can be linked to process parameters.
+    \item A documentation of the creation of the Digital Twin model, showing how bottom-up data-driven modelling can capture even complex, sensor-rich processes such as when hot spun sugar starts to form cotton candy.
+    \item An evaluation of the prescriptive Digital Twin implementation, demonstrating its ability not only to mirror and predict but also to recommend interventions in real time.
+\end{itemize}
 
-A digital twin from the intersection of a universal robots arm and a fucking cotton candy machine. How cool and random is this?
-If somebody did it before I will jump from a cliff I tell you... xD
-
-\section{Methodology}
-\label{sec:intro:meth}
 
 
 
-Design Science in Information System (Hevner). How are we doing research?
-
-(1) Summary what design science is (it uses stakeholders, artefacts, steps,
-...). 
-
-(2) What are the stakeholders, artefacts, steps for MY case.
-What does it mean for my thesis?
-
-About 1.5 pages.
-
+% Design Science in Information System (Hevner). How are we doing research? \cite{Hevner2004}
+% (1) Summary what design science is (it uses stakeholders, artefacts, steps,
+% ...). 
+% (2) What are the stakeholders, artefacts, steps for MY case.
+% What does it mean for my thesis?
+% About 1.5 pages.
 % Stichpunkte:
 % - Use Hevner's framework to justify Design Science as methodology
 % - You're building and evaluating a technical artefact (digital twin + quality assessment)
@@ -72,24 +69,155 @@ About 1.5 pages.
 % - Scientific rigor: structured measurement and evaluation
 % - Matches Hevner's cycle: build → evaluate → improve
 
-This work follows the Design Science Research (DSR) paradigm as defined by Hevner et al.~\cite{Hevner2004}. The DSR approach provides a structured framework for the development and evaluation of innovative artefacts that solve real-world problems in a rigorous and methodologically grounded manner.
+\section{Methodology}
+\label{sec:intro:meth}
 
-In the context of this thesis, the central artefact is a digital twin system for a cotton candy production robot. This artefact comprises both the virtual representation of the physical process and the accompanying infrastructure for capturing environmental and process-related parameters (e.g., humidity, input sugar, and runtime), as well as metrics of product quality (e.g., volume, weight, and fluffiness).
+To position this thesis within an established research tradition, we adopt the Design Science Research (DSR) paradigm as defined by Hevner et al.\ \cite{Hevner2004}. DSR is particularly well suited for this work, as it emphasizes the design and evaluation of innovative artefacts that address real-world problems while simultaneously contributing to scientific knowledge. In addition, we draw on the methodological principles of Zaki and Meira \cite{Zaki2020} for data collection, cleaning, mining, and analysis, which form the technical backbone of constructing a data-driven digital twin.
 
-The digital twin is iteratively refined through cycles of design and evaluation, in accordance with the DSR methodology. The system is deployed in a real-world production context and evaluated based on its ability to improve product quality and production efficiency under varying conditions. This dual focus on practical applicability and measurable improvement ensures that the artefact addresses both relevance and rigour — the core criteria of Hevner’s framework.
+\subsection*{Design Science in Information Systems}
+DSR has emerged as a cornerstone methodology in the field of Information Systems. It acknowledges that research in this domain often involves the creation of artefacts such as models, methods, systems, and frameworks, which are then evaluated both for their practical utility and their theoretical contribution. According to Hevner et al., three cycles guide DSR: the \textit{relevance cycle}, which connects the research to its practical environment; the \textit{rigor cycle}, which ensures grounding in scientific theories and prior work; and the \textit{design cycle}, which iteratively builds and evaluates artefacts.
+
+The value of DSR lies in its dual orientation: it not only produces useful artefacts but also advances theoretical understanding by abstracting design knowledge from practical interventions. This methodological orientation is particularly fitting for this thesis, which aims to design and implement a prescriptive digital twin that is both technologically functional and theoretically informative.
+
+\subsection*{Application to This Thesis}
+In the context of this thesis, the central artefact is the digital twin of the Cotton Candy Automata. The automata itself, a robotic system combining a universal robot arm with a customized cotton candy machine, serves as the physical environment in which the artefact is embedded. The digital twin comprises multiple layers: 
+\begin{itemize}
+    \item a \textbf{virtual representation} of the production process, constructed as a cpee process model.
+    \item the \textbf{data infrastructure} as process logs required to capture and preprocess parameters such as temperatures, humidity, weights, energy consumption, and run times.
+    \item the \textbf{analytics and prescriptive components} as machine learning models, that generate recommendations to optimize quality, time, and energy efficiency.
+\end{itemize}
+
+\textbf{Stakeholders.} The primary stakeholders in this research include (1) researchers in business process management and digital twin methodologies, who benefit from methodological contributions; (2) practitioners in food engineering and small-scale manufacturing, who may apply the findings in similar production settings; and (3) the developers of cyber-physical systems, who can draw on the design insights gained from building a bottom-up prescriptive twin.
+% - Everybody who got a free Cotton Candy too
+
+\textbf{Artefacts.} Following Hevner’s classification, the artefacts created in this thesis include:
+\begin{enumerate}
+    \item a functioning \textbf{digital twin system} for cotton candy production,
+    \item a set of \textbf{process and data models} capturing the causal relationships between process parameters and product outcomes,
+    \item the \textbf{evaluation framework} comparing the digital twin to the baseline automata.
+\end{enumerate}
+
+\textbf{Research cycles.} The relevance cycle is embodied in the real-world setting of cotton candy production, a domain where quality and stability are strongly affected by environmental and process parameters. The rigor cycle is ensured by grounding the work in prior digital twin research, food science on cotton candy physicochemical properties, and established process mining and machine learning techniques. The design cycle is realized through iterative development: building the digital twin prototype, evaluating it against baseline performance, and refining its prescriptive logic based on empirical evidence.
+
+
+
+\begin{figure}[t]
+\centering
+\begin{adjustbox}{max width=\textwidth, center}
+\begin{tikzpicture}[
+  font=\small,
+  >=Latex,
+  node distance=9mm and 12mm,
+  box/.style={draw, rounded corners=2mm, align=left, inner sep=3.5mm, fill=white},
+  tallbox/.style={box, minimum width=35mm, minimum height=58mm},
+  innerbox/.style={box, minimum width=42mm, align=left},
+  title/.style={font=\bfseries\small},
+  flow/.style={-{Latex[length=3mm]}, line width=0.5pt},
+  fatflow/.style={-{Latex[length=3.2mm]}, line width=0.9pt},
+  accent/.style={draw=black, fill=green!18},
+  note/.style={font=\footnotesize\itshape},
+]
+
+% ====== OUTER COLUMNS ======
+% Left: Environment
+\node[tallbox] (env) {
+  \textbf{Environment}\\[1mm]
+  \textbf{People}\\
+  -- Graphic Designer\\
+  -- Manager\\[1mm]
+  \textbf{Technology}\\
+  -- Scalable Vector Graphics (SVG)\\[-0.5mm]
+};
+
+% Right: Knowledge Base
+\node[tallbox, right=75mm of env.east] (kb) {
+  \textbf{Knowledge Base}\\[1mm]
+  \textbf{Foundations}\\
+  -- Digital Twin Literature\\
+  -- SVG Manipulation\\[1mm]
+  \textbf{Methodologies}\\
+  -- Experimentation
+};
+
+% Center: Design column (outer frame)
+\node[draw, rounded corners=2mm, minimum width=56mm, minimum height=68mm, 
+      align=center, fill=white] (design) at ($(env.east)!0.5!(kb.west)$) {};
+
+% Design title (tab)
+\node[above=0mm of design.north] (designtitle) {\textbf{Design}};
+
+% ====== INNER DESIGN: Build / Evaluate ======
+\node[innerbox, fill=white, anchor=north] (build) at ($(design.north)+(0,-8mm)$) {
+  \textbf{Build Artifacts}\\
+  -- Literature Review\\
+  -- 2 Example Visualizations\\
+  -- Visualization Method and Framework\\
+  -- Evaluation
+};
+
+\node[innerbox, below=7mm of build.south, anchor=north, minimum width=52mm] (eval) {
+  \textbf{Evaluate}\\
+  -- User Study
+};
+
+% Arrows Assess / Refine
+\draw[flow] (build.south) -- node[right, note]{Assess} (eval.north);
+\draw[flow] (eval.north) .. controls +(180:10mm) and +(180:10mm) .. node[above, note]{Refine} (build.south);
+
+% ====== RELEVANCE / RIGOR BADGES ======
+% Relevance label above left arrow
+\node[box, accent, minimum width=18mm, minimum height=6mm, anchor=south]
+      (relevance) at ($(env.north)!0.5!(design.north)+(0,7mm)$) {\textbf{Relevance}};
+
+% Rigor label above right arrow
+\node[box, accent, minimum width=12mm, minimum height=6mm, anchor=south]
+      (rigor) at ($(design.north)!0.5!(kb.north)+(0,7mm)$) {\textbf{Rigor}};
+
+% ====== HORIZONTAL FLOWS (ENV <-> DESIGN <-> KB) ======
+% Needs (left-to-center)
+\draw[fatflow, draw=green!60!black, fill=none] (env.east) -- node[above]{\textbf{Business Needs}} (design.west);
+
+% Applicable Knowledge (right-to-center)
+\draw[fatflow, draw=green!60!black, fill=none] (kb.west) -- node[above]{\textbf{Applicable Knowledge}} (design.east);
+
+% ====== BOTTOM FEEDBACK ARROWS ======
+% Application in Environment (Design -> Env)
+\draw[flow] (design.south west) -- ++(-20mm, -6mm) node[below, align=center] {\footnotesize Application in the\\[-0.2ex] \footnotesize Appropriate Environment} |- (env.south);
+
+% Additions to Knowledge Base (Design -> KB)
+\draw[flow] (design.south east) -- ++(20mm, -6mm) node[below, align=center] {\footnotesize Additions to the\\[-0.2ex] \footnotesize Knowledge Base} |- (kb.south);
+
+\end{tikzpicture}
+\end{adjustbox}
+\caption{Design Science Research Framework (after Hevner et al., 2004; Hevner, 2007).}
+\label{fig:hevner-dsr-tikz}
+\end{figure}
+% \todo{Fix this!! If you are good with Tikz pls feel free, should look like:\url{https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FS-research-framework-Hevner-et-al-2004_fig1_228338686&psig=AOvVaw1OZfVJs0qDGRUYs2Nfi3ov&ust=1756830014893000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJD7npeUuI8DFQAAAAAdAAAAABAL}}
+
+\subsection*{Data Collection and Analysis}
+Complementing the DSR framework, we adopt the methodological basis of Zaki and Meira \cite{Zaki2020} to structure the collection and analysis of process data. This involves four steps: (1) systematic collection of sensor data from the automata (e.g., temperature profiles, humidity, and machine runtime); (2) preprocessing and cleaning to handle noise, missing values, and synchronization across streams; (3) process mining and statistical analysis to uncover dependencies between parameters and outcomes; and (4) machine learning for predictive and prescriptive modeling. These steps ensure that the digital twin is empirically grounded and continuously updated with real-world measurements.
+
 
 \section{Evaluation}
 \label{sec:intro:ev}
+% How will I evaluate that my proposal is good. This ties into the research questions.
+% About 1 page.
 
-How will I evaluate that my proposal is good. This ties into the research questions.
+This chapter evaluates whether the prescriptive Digital Twin achieves the goals set out in the research questions. We adopt a controlled experimental design that compares (i) the baseline ``unintelligent'' automata with an early, hand-guessed function approximation, and (iii) the prescriptive Digital Twin. Across multiple sessions and varying ambient conditions, we produce repeated batches with matched sugar input while randomizing parameter orders to mitigate carry-over effects.
 
-About 1 page.
+To make ``good'' cotton candy measurable, we define a quality score that combines (a) formation consistency, (b) size and weight, and (c) short-term pressure after production. The score is computed automatically from the process quality measurement services. In addition to quality, we record time-to-handover-product and energy-per-process.
+
+The primary analysis quantifies improvements of the Digital Twin over both baselines along three dimensions: (1) \emph{descriptive} fidelity (ability to reproduce observed process behavior), (2) \emph{predictive} accuracy (forecast of outcomes under parameter choices), and (3) \emph{prescriptive} benefit (actual gains in quality, time, and energy when following recommendations). We report effect sizes and confidence intervals for each metric, and summarize results with aggregate improvements per session.
+\todo{rewrite}
+
+Robustness checks include: (i) cross-validation with held-out runs; (ii) sensitivity analyses where individual sensors or features are ablated to assess dependence; and (iii) a qualitative sanity check in which automated scores are compared to brief human inspection. Finally, we assess transferability by repeating a subset of runs under altered environmental conditions and by replaying logs through the twin to verify that recommendations remain consistent.
+
+Success criteria are met if the Digital Twin (a) increases the composite quality score while (b) reducing either time-to-product or energy-per-batch (preferably both), and (c) maintains these gains under the robustness checks above. The detailed results are presented in Chapter~\ref{sec:evaluation} and discussed in Chapter~\ref{sec:discussion}.
 
 \section{Structure}
 \label{sec:intro:struct}
-
-Which chapters will my thesis have, and what are they all about.
-About 1/4 page.
+% Which chapters will my thesis have, and what are they all about.
+% About 1/4 page.
 
 So, we have Related Work where we go into existing literature on digital twins, food papers about cotton candy and data science book to build a solid foundation for our research. Important because we will use it a lot for our Data Collection, searching correlations and building models.
 Next, we have our Solution Design, where we explain the stakeholders involved, and the artefacts we are creating. This section will detail how we are building and evaluating our digital twin. \todo{Rewrite this after you are finished}
