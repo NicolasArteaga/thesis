@@ -2375,8 +2375,29 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">Hevner2004</bcf:citekey>
     <bcf:citekey order="2" intorder="1">Zaki2020</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">FORNARI2025101477</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">FORNARI2025101477</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Zaki2020</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">VANDERHORN2021113524</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">PERNO2022103558</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">KREUZER2024102304</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">FORNARI2025101477</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">10716255</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">8622412</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">WALTON2024110241</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">FORNARI2025101477</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">10716255</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">WALTON2024110241</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">8622412</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">11015088</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">labuza</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">TERASHIMA2022139953</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">labuza</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">TERASHIMA2022139953</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">waveshareIRsensor</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Zaki2020</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">FORNARI2025101477</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">FORNARI2025101477</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">FORNARI2025101477</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">KREUZER2024102304</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

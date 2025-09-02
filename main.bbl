@@ -99,6 +99,148 @@
       \field{title}{Data Mining and Machine Learning: Fundamental Concepts and Algorithms}
       \field{year}{2020}
     \endentry
+    \entry{VANDERHORN2021113524}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=0a3e7703a9c5b08db027272c534ad8df}{%
+           family={VanDerHorn},
+           familyi={V\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b355b4e41b9afd30080a3e932da41301}{%
+           family={Mahadevan},
+           familyi={M\bibinitperiod},
+           given={Sankaran},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0324d47cc0d448d13b3058c79c17122b}
+      \strng{fullhash}{0324d47cc0d448d13b3058c79c17122b}
+      \strng{fullhashraw}{0324d47cc0d448d13b3058c79c17122b}
+      \strng{bibnamehash}{0324d47cc0d448d13b3058c79c17122b}
+      \strng{authorbibnamehash}{0324d47cc0d448d13b3058c79c17122b}
+      \strng{authornamehash}{0324d47cc0d448d13b3058c79c17122b}
+      \strng{authorfullhash}{0324d47cc0d448d13b3058c79c17122b}
+      \strng{authorfullhashraw}{0324d47cc0d448d13b3058c79c17122b}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Digital Twin is one of the promising digital technologies being developed at present to support digital transformation and decision making in multiple industries. While the concept of a Digital Twin is nearly 20 years old, it continues to evolve as it expands to new industries and use cases. This has resulted in a continually increasing variety of definitions that threatens to dilute the concept and lead to ineffective implementations of the technology. There is a need for a consolidated and generalized definition, with clearly established characteristics to distinguish what constitutes a Digital Twin and what does not. This paper reviews 46 Digital Twin definitions given in the literature over the past ten years to propose a generalized definition that encompasses the breadth of options available and provides a detailed characterization which includes criteria to distinguish the Digital Twin from other digital technologies. Next, a process and considerations for the implementation of Digital Twins is presented through a case study. Digital Twin future needs and opportunities are also outlined.}
+      \field{issn}{0167-9236}
+      \field{journaltitle}{Decision Support Systems}
+      \field{title}{Digital Twin: Generalization, characterization and implementation}
+      \field{volume}{145}
+      \field{year}{2021}
+      \field{pages}{113524}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.dss.2021.113524
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167923621000348
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167923621000348
+      \endverb
+      \keyw{Digital Twin,Decision making,Virtual representation,Model updating,Information fusion}
+    \endentry
+    \entry{PERNO2022103558}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=4382ab122f5e8d12b3a076d72a42aa0e}{%
+           family={Perno},
+           familyi={P\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f01be8d68263342509a7a2eaf7c33931}{%
+           family={Hvam},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=223fef4e84e1252f2f60b2e96dfba94d}{%
+           family={Haug},
+           familyi={H\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{87f31cbd127480681226ed0edc33e9cd}
+      \strng{fullhash}{9d7ab345ab0b6fb999357c40e182b3fb}
+      \strng{fullhashraw}{9d7ab345ab0b6fb999357c40e182b3fb}
+      \strng{bibnamehash}{9d7ab345ab0b6fb999357c40e182b3fb}
+      \strng{authorbibnamehash}{9d7ab345ab0b6fb999357c40e182b3fb}
+      \strng{authornamehash}{87f31cbd127480681226ed0edc33e9cd}
+      \strng{authorfullhash}{9d7ab345ab0b6fb999357c40e182b3fb}
+      \strng{authorfullhashraw}{9d7ab345ab0b6fb999357c40e182b3fb}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Since the introduction of the concept of “digital twins” (DTs) in 2002, the number of practical applications in different industrial sectors has grown rapidly. Despite the hype surrounding this technology, companies face significant challenges upon deciding to implement DTs in their organizations due to the novelty of the concept. Furthermore, little research on DT has been conducted for the process industry, which may be explained by the high complexity of accurately representing and modeling the physics behind production processes. To consolidate the fragmented literature on the enabling factors and challenges in DT implementation in the process industry, this study organizes the existing studies on DTs with a focus on barriers and enablers. On this basis, this study contributes to the existing body of knowledge on DTs by organizing the DT literature and by proposing conceptual models describing enablers of and barriers to DT implementation, as well as their mutual relationships.}
+      \field{issn}{0166-3615}
+      \field{journaltitle}{Computers in Industry}
+      \field{title}{Implementation of digital twins in the process industry: A systematic literature review of enablers and barriers}
+      \field{volume}{134}
+      \field{year}{2022}
+      \field{pages}{103558}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.compind.2021.103558
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0166361521001652
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0166361521001652
+      \endverb
+      \keyw{Digital twin,Simulation,Process industry,Literature review,Barrier,Enabler}
+    \endentry
+    \entry{KREUZER2024102304}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=cdceba6a22571dc2b00ccd0d626e6451}{%
+           family={Kreuzer},
+           familyi={K\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=122f9bf2cbd90adac978090b643d4d7e}{%
+           family={Papapetrou},
+           familyi={P\bibinitperiod},
+           given={Panagiotis},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e9c007ee58205a307055850744b3c11d}{%
+           family={Zdravkovic},
+           familyi={Z\bibinitperiod},
+           given={Jelena},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{7729a827b32f3a95e4b9d52a80d98608}
+      \strng{fullhash}{2e01c99938e93b9fc5c393dcf762c31e}
+      \strng{fullhashraw}{2e01c99938e93b9fc5c393dcf762c31e}
+      \strng{bibnamehash}{2e01c99938e93b9fc5c393dcf762c31e}
+      \strng{authorbibnamehash}{2e01c99938e93b9fc5c393dcf762c31e}
+      \strng{authornamehash}{7729a827b32f3a95e4b9d52a80d98608}
+      \strng{authorfullhash}{2e01c99938e93b9fc5c393dcf762c31e}
+      \strng{authorfullhashraw}{2e01c99938e93b9fc5c393dcf762c31e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Artificial intelligence and digital twins have become more popular in recent years and have seen usage across different application domains for various scenarios. This study reviews the literature at the intersection of the two fields, where digital twins integrate an artificial intelligence component. We follow a systematic literature review approach, analyzing a total of 149 related studies. In the assessed literature, a variety of problems are approached with an artificial intelligence-integrated digital twin, demonstrating its applicability across different fields. Our findings indicate that there is a lack of in-depth modeling approaches regarding the digital twin, while many articles focus on the implementation and testing of the artificial intelligence component. The majority of publications do not demonstrate a virtual-to-physical connection between the digital twin and the real-world system. Further, only a small portion of studies base their digital twin on real-time data from a physical system, implementing a physical-to-virtual connection.}
+      \field{issn}{0169-023X}
+      \field{journaltitle}{Data & Knowledge Engineering}
+      \field{title}{Artificial intelligence in digital twins—A systematic literature review}
+      \field{volume}{151}
+      \field{year}{2024}
+      \field{pages}{102304}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.datak.2024.102304
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0169023X24000284
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0169023X24000284
+      \endverb
+      \keyw{Artificial intelligence,Digital twin,Machine learning,Literature review,Business intelligence,Data mining}
+    \endentry
     \entry{FORNARI2025101477}{article}{}{}
       \name{author}{23}{}{%
         {{hash=1fbd7eeb8c89d000f7302d8626e0f02c}{%
@@ -225,8 +367,8 @@
       \strng{authornamehash}{6a175c936d7bcf874501711fbb148bfa}
       \strng{authorfullhash}{35c47c1b4d870e0fbe952233eea847f2}
       \strng{authorfullhashraw}{35c47c1b4d870e0fbe952233eea847f2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Modern organizations necessitate continuous business processes improvement to maintain efficiency, adaptability, and competitiveness. In the last few years, the Internet of Things, via the deployment of sensors and actuators, has heavily been adopted in organizational and industrial settings to monitor and automatize physical processes influencing and enhancing how people and organizations work. Such advancements are now pushed forward by the rise of the Digital Twin paradigm applied to organizational processes. Advanced ways of managing and maintaining business processes come within reach as there is a Digital Twin of a business process - a virtual replica with real-time capabilities of a real process occurring in an organization. Combining business process models with real-time data and simulation capabilities promises to provide a new way to guide day-to-day organization activities. However, integrating Digital Twins and business processes is a non-trivial task, presenting numerous challenges and ambiguities. This manifesto paper aims to contribute to the current state of the art by clarifying the relationship between business processes and Digital Twins, identifying ongoing research and open challenges, thereby shedding light on and driving future exploration of this innovative interplay.}
@@ -247,6 +389,290 @@
       \verb https://www.sciencedirect.com/science/article/pii/S2542660524004189
       \endverb
       \keyw{Digital Twin,Business process,Internet of Things}
+    \endentry
+    \entry{10716255}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=9768fa9eea62530d90663cab5dcf9bed}{%
+           family={Vitale},
+           familyi={V\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=38d43ead04259c83bbcd34a36c0e6a83}{%
+           family={Guarino},
+           familyi={G\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7dab82aa24695835d3cbe584c9acad51}{%
+           family={Flammini},
+           familyi={F\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=608a43a8e3884a075899f999dd2df57d}{%
+           family={Faramondi},
+           familyi={F\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=72a6f92e2c2ce19dc0ed1a7c28e39016}{%
+           family={Mazzocca},
+           familyi={M\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=eff2da38100bfcc82cb2e9d8f04c9903}{%
+           family={Setola},
+           familyi={S\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{49977590219b50cdc7e9a9fea8575fa0}
+      \strng{fullhash}{88e3e6dabeb21bdf6213f1fdf47941a6}
+      \strng{fullhashraw}{88e3e6dabeb21bdf6213f1fdf47941a6}
+      \strng{bibnamehash}{88e3e6dabeb21bdf6213f1fdf47941a6}
+      \strng{authorbibnamehash}{88e3e6dabeb21bdf6213f1fdf47941a6}
+      \strng{authornamehash}{49977590219b50cdc7e9a9fea8575fa0}
+      \strng{authorfullhash}{88e3e6dabeb21bdf6213f1fdf47941a6}
+      \strng{authorfullhashraw}{88e3e6dabeb21bdf6213f1fdf47941a6}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Industrial Informatics}
+      \field{number}{1}
+      \field{title}{Process Mining for Digital Twin Development of Industrial Cyber-Physical Systems}
+      \field{volume}{21}
+      \field{year}{2025}
+      \field{pages}{866\bibrangedash 875}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/TII.2024.3465600
+      \endverb
+      \keyw{Petri nets;Monitoring;Mathematical models;Digital twins;Analytical models;Power system dynamics;Vehicle dynamics;Data models;Measurement;Anomaly detection;Conformance checking (CC);event logs;modeling;monitoring;process discovery (PD);simulation;water distribution testbed (WDT)}
+    \endentry
+    \entry{8622412}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=3b4151e3ee53130120d621e150c20f46}{%
+           family={Stojanovic},
+           familyi={S\bibinitperiod},
+           given={Nenad},
+           giveni={N\bibinitperiod}}}%
+        {{hash=a198189a41d8ff8479cd1cbbb9256152}{%
+           family={Milenovic},
+           familyi={M\bibinitperiod},
+           given={Dejan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1b20eddb0d672495233bdb02fecb962}
+      \strng{fullhash}{f1b20eddb0d672495233bdb02fecb962}
+      \strng{fullhashraw}{f1b20eddb0d672495233bdb02fecb962}
+      \strng{bibnamehash}{f1b20eddb0d672495233bdb02fecb962}
+      \strng{authorbibnamehash}{f1b20eddb0d672495233bdb02fecb962}
+      \strng{authornamehash}{f1b20eddb0d672495233bdb02fecb962}
+      \strng{authorfullhash}{f1b20eddb0d672495233bdb02fecb962}
+      \strng{authorfullhashraw}{f1b20eddb0d672495233bdb02fecb962}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE International Conference on Big Data (Big Data)}
+      \field{title}{Data-driven Digital Twin approach for process optimization: an industry use case}
+      \field{year}{2018}
+      \field{pages}{4202\bibrangedash 4211}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/BigData.2018.8622412
+      \endverb
+      \keyw{Process control;Big Data;Data models;Laser beam cutting;Monitoring;Production;Manufacturing;industry data analytics;data twin;process optimization}
+    \endentry
+    \entry{WALTON2024110241}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=fbba134b8fb9b0d83fa09e36d9e93465}{%
+           family={Walton},
+           familyi={W\bibinitperiod},
+           given={Ryan\bibnamedelima B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=fd2d7cdafa8854f3672a252d32a34c74}{%
+           family={Ciarallo},
+           familyi={C\bibinitperiod},
+           given={Frank\bibnamedelima W.},
+           giveni={F\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=65ff2827db1ef3020cb34824420fc209}{%
+           family={Champagne},
+           familyi={C\bibinitperiod},
+           given={Lance\bibnamedelima E.},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3e81d94aaeee50cb21e5d220c62fb1a}
+      \strng{fullhash}{5f2943ef0ecd2b3cbaebdd9c3f325385}
+      \strng{fullhashraw}{5f2943ef0ecd2b3cbaebdd9c3f325385}
+      \strng{bibnamehash}{5f2943ef0ecd2b3cbaebdd9c3f325385}
+      \strng{authorbibnamehash}{5f2943ef0ecd2b3cbaebdd9c3f325385}
+      \strng{authornamehash}{c3e81d94aaeee50cb21e5d220c62fb1a}
+      \strng{authorfullhash}{5f2943ef0ecd2b3cbaebdd9c3f325385}
+      \strng{authorfullhashraw}{5f2943ef0ecd2b3cbaebdd9c3f325385}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Based on an overview of the historical and rapidly expanding literature on digital twins, this paper identifies fundamental capabilities that outline a general and adaptable twin that supports system development, real-time interactions, prescribing courses of action, and actualizing them. We relate these capabilities to business analytics concepts and decision-making processes geared toward rapid adaptation to changing situations. This leads to a general digital twin architecture supporting a system throughout its lifecycle implemented with components including Internet of Things (IoT) devices, a virtual reality environment, network communications, and an analytic simulation. The success of this architecture revolves around an authoritative data source, the Highly Integrated Virtual Environment (HIVE). We demonstrate the architecture and capabilities through a transporter system example. This demonstration highlights important timing and synchronization questions critical to fulfilling the twin’s fundamental role of reacting to evolving real-world conditions. It identifies the importance of lags in decisions, relates it to prescriptive response time and the rate of evolution of the underlying system, and quantifies this impact with new metrics of effectiveness lag and relevancy decay.}
+      \field{issn}{0360-8352}
+      \field{journaltitle}{Computers & Industrial Engineering}
+      \field{title}{A unified digital twin approach incorporating virtual, physical, and prescriptive analytical components to support adaptive real-time decision-making}
+      \field{volume}{193}
+      \field{year}{2024}
+      \field{pages}{110241}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.cie.2024.110241
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0360835224003620
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0360835224003620
+      \endverb
+      \keyw{Digital twin,Simulation,Augmented/virtual reality,Real-time decision-making}
+    \endentry
+    \entry{11015088}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=82751f74a765ce06a57e273e396a486d}{%
+           family={Giussani},
+           familyi={G\bibinitperiod},
+           given={Samuele},
+           giveni={S\bibinitperiod}}}%
+        {{hash=03e9a9ed04b8ae406a7d27f17cf22363}{%
+           family={Perez-Palacin},
+           familyi={P\bibinithyphendelim P\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod}}}%
+        {{hash=cf5098635997be6136360bc2abc530a5}{%
+           family={Caporuscio},
+           familyi={C\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8dc386738ba9eaaa63f61deb8c58779e}{%
+           family={Edrisi},
+           familyi={E\bibinitperiod},
+           given={Farid},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf38a04d79bf6b8e79f497b532e3efeb}
+      \strng{fullhash}{23ac35357a80dcfd72befba3d8bfaeef}
+      \strng{fullhashraw}{23ac35357a80dcfd72befba3d8bfaeef}
+      \strng{bibnamehash}{23ac35357a80dcfd72befba3d8bfaeef}
+      \strng{authorbibnamehash}{23ac35357a80dcfd72befba3d8bfaeef}
+      \strng{authornamehash}{cf38a04d79bf6b8e79f497b532e3efeb}
+      \strng{authorfullhash}{23ac35357a80dcfd72befba3d8bfaeef}
+      \strng{authorfullhashraw}{23ac35357a80dcfd72befba3d8bfaeef}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 IEEE 22nd International Conference on Software Architecture Companion (ICSA-C)}
+      \field{title}{Business Process Lifecycle Enhancement via Digital Twin and Model-Driven Engineering}
+      \field{year}{2025}
+      \field{pages}{300\bibrangedash 309}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/ICSA-C65153.2025.00050
+      \endverb
+      \keyw{Analytical models;Uncertainty;Software architecture;Organizations;Transforms;Reliability engineering;Model driven engineering;Digital twins;Software reliability;Manufacturing}
+    \endentry
+    \entry{labuza}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a13d0acd86d69850ad010182d15d1796}{%
+           family={Labuza},
+           familyi={L\bibinitperiod},
+           given={Theodore},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d2a3703e936adf27698ba95e02e52e95}{%
+           family={Labuza},
+           familyi={L\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{92c15f4b669cd11dcf078f7f55ee8ecd}
+      \strng{fullhash}{92c15f4b669cd11dcf078f7f55ee8ecd}
+      \strng{fullhashraw}{92c15f4b669cd11dcf078f7f55ee8ecd}
+      \strng{bibnamehash}{92c15f4b669cd11dcf078f7f55ee8ecd}
+      \strng{authorbibnamehash}{92c15f4b669cd11dcf078f7f55ee8ecd}
+      \strng{authornamehash}{92c15f4b669cd11dcf078f7f55ee8ecd}
+      \strng{authorfullhash}{92c15f4b669cd11dcf078f7f55ee8ecd}
+      \strng{authorfullhashraw}{92c15f4b669cd11dcf078f7f55ee8ecd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Food Processing and Preservation}
+      \field{month}{12}
+      \field{title}{Influence of temperature and relative humidity on the physical states of cotton candy}
+      \field{volume}{28}
+      \field{year}{2004}
+      \field{pages}{274\bibrangedash 287}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1111/j.1745-4549.2004.24041.x
+      \endverb
+    \endentry
+    \entry{TERASHIMA2022139953}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f4f56360402b84da288a0585b5ab4c02}{%
+           family={Terashima},
+           familyi={T\bibinitperiod},
+           given={Yukio},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4f56360402b84da288a0585b5ab4c02}
+      \strng{fullhash}{f4f56360402b84da288a0585b5ab4c02}
+      \strng{fullhashraw}{f4f56360402b84da288a0585b5ab4c02}
+      \strng{bibnamehash}{f4f56360402b84da288a0585b5ab4c02}
+      \strng{authorbibnamehash}{f4f56360402b84da288a0585b5ab4c02}
+      \strng{authornamehash}{f4f56360402b84da288a0585b5ab4c02}
+      \strng{authorfullhash}{f4f56360402b84da288a0585b5ab4c02}
+      \strng{authorfullhashraw}{f4f56360402b84da288a0585b5ab4c02}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Cotton candy is a confection made by solidifying melted sugar into fibers. Differential scanning calorimetry (DSC) was performed for two kinds of cotton candy made in an air (CCA) and in a nitrogen gas (CCN) and for crystalline sucrose (CS) and its quenched melt as amorphous sucrose (AS). The CCA was mainly crystalline with a small amorphous part and easily degraded by aging. The CCN exhibited a more glassy structure, and its aging behavior was different from that of the CCA. Gas conditions in cooking were found to be crucial to the physical state and thermal stability of cotton candy.}
+      \field{issn}{0009-2614}
+      \field{journaltitle}{Chemical Physics Letters}
+      \field{title}{Thermal study on cotton candy by differential scanning calorimetry}
+      \field{volume}{805}
+      \field{year}{2022}
+      \field{pages}{139953}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.cplett.2022.139953
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0009261422006121
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0009261422006121
+      \endverb
+      \keyw{Cotton candy,Sucrose,Amorphous,Crystalline,Differential scanning calorimetry}
+    \endentry
+    \entry{waveshareIRsensor}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b7e398bfd94bab7e7a98e2bd288cb5aa}{%
+           family={{Waveshare}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7e398bfd94bab7e7a98e2bd288cb5aa}
+      \strng{fullhash}{b7e398bfd94bab7e7a98e2bd288cb5aa}
+      \strng{fullhashraw}{b7e398bfd94bab7e7a98e2bd288cb5aa}
+      \strng{bibnamehash}{b7e398bfd94bab7e7a98e2bd288cb5aa}
+      \strng{authorbibnamehash}{b7e398bfd94bab7e7a98e2bd288cb5aa}
+      \strng{authornamehash}{b7e398bfd94bab7e7a98e2bd288cb5aa}
+      \strng{authorfullhash}{b7e398bfd94bab7e7a98e2bd288cb5aa}
+      \strng{authorfullhashraw}{b7e398bfd94bab7e7a98e2bd288cb5aa}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.waveshare.com/wiki/Infrared_Temperature_Sensor}}
+      \field{note}{Accessed: 2025-01-14}
+      \field{title}{Infrared Temperature Sensor - User Manual}
+      \field{year}{2025}
     \endentry
   \enddatalist
 \endrefsection

@@ -6,6 +6,78 @@
     •	How does it change with production parameters?
     What we already learned doing cc is -> The notes from the notion
 
+\section{Design Goals and Approach}
+% High-level aims (why a prescriptive DT, bottom-up design, reproducibility).
+
+\section{System Architecture}
+% Conceptual block diagram: sensors, machine, twin, data collection.
+
+\section{Sensor Design and Placement}
+\subsection{Temperature Sensors}
+% Infrared + ambient.
+
+
+\paragraph{Infrared Object Temperature Sensor}
+To monitor the thermal behavior of the cotton candy machine's rotating head, we use a non-contact infrared temperature sensor (MLX90614). This sensor is well suited for the application due to its high accuracy (±0.5°C in the critical 0–50°C range) and wide measurement span, covering object temperatures from --70°C up to 380°C. These properties make it ideal for tracking the heating phase where the sugar melts and begins to form cotton candy.
+
+Although only one sensor is used during regular operation, we conducted a dedicated experiment using a second sensor to evaluate placement and correlation. One sensor was positioned inside the machine, 3 cm above the rotating head, while the other was mounted below the machine base, pointing sideways toward the head at the same distance. Over 2000 seconds, both sensors recorded temperature data to assess the relationship between internal and external readings.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/IrO1 and IrO2 Over Time.png}
+    \caption{Comparison of internal (IrO1) and external (IrO2) infrared temperature sensors over 2000 seconds.}
+    \label{fig:ir-comparison}
+\end{figure}
+
+A linear regression analysis showed a strong correlation between the two sensors, with a coefficient of determination $R^2 = 0.996$, slope $a = 0.383$, and intercept $b = 12.15$. The resulting model for estimating the external temperature $T_{\text{outside}}$ based on the internal reading $T_{\text{inside}}$ is:
+
+\[
+T_{\text{outside}} = 0.383 \cdot T_{\text{inside}} + 12.15
+\]
+
+This strong correlation implies that the internal head temperature can be reliably estimated from the external measurement. Consequently, the system design employs only a single infrared temperature sensor mounted outside the head during operation. This placement avoids obstructing the cotton candy formation process while maintaining accurate and reliable thermal monitoring. The sensor’s communication protocol and technical specifications are described in the official documentation~\cite{waveshareIRsensor}.
+
+\subsection{Humidity Sensors}
+% Inside vs outside, offset explanation.
+
+\subsection{Humidity Sensor Offset}
+During idle phases, the inside humidity sensor consistently showed 2--5\% higher values than the outside reference. This effect is best explained by placement and airflow, since it disappeared once the machine was running. Replacing the sensors produced the same pattern, confirming it is not sensor wear but an environmental effect. For the digital twin, this means that differences observed during operation can be interpreted as true process dynamics, such as moisture accumulation, rather than calibration bias.
+
+\subsection{Energy Monitoring}
+% Plug sensor and rationale.
+
+\section{Cotton Candy Product Characteristics}
+\subsection{What we learned empirically doing CC}
+    - write times, forms, radius why that radius etc etc etc
+    => We can create a formula of how we think it behaves, that we can compare afterwards in the Data Recollection Evaluation.
+\subsection{Physical Structure}
+% Amorphous vs crystalline, thermal study.
+
+\subsection{Quality Indicators}
+% Volume density, compression test, etc.
+
+\subsection{Excluded Factors}
+% Taste, visual appearance, long-term hygroscopic behavior.
+
+\section{Process Parameters and Environmental Factors}
+\subsection{Humidity}
+% Effects during spinning and after; airflow.
+
+\subsection{Temperature}
+% Limited control, cooking time as proxy.
+
+\subsection{Spinning Speed}
+% Fixed.
+
+\subsection{Sugar Amount and Formulation}
+% Fixed, supermarket sugar.
+
+\section{Prescriptive Digital Twin Design}
+% How environment + process map to quality.
+% Forecasting with decision trees.
+% High-level evaluation plan.
+
+
 \section{    •	What is the physical structure of cotton candy?}
 Cotton candy is primarily composed of spun sucrose, which can exist in two main forms:WHat we saw in the paper\dots
 
@@ -76,10 +148,7 @@ In contrast, at low humidity:
 
     - Sugar formulation -> Use anti-hygroscopic additives (e.g., small \% of maltodextrin or stabilizers) -> Slows moisture absorption. Often used in industrial production. We are not chanign the sugar formulation. We are always using the same sugar from the supermarket for making it easier to reproduce the results.
 
-\section{What we learned empirically doing CC}
-    - write times, forms, radius why that radius etc etc etc
 
-    => We can create a formula of how we think it behaves, that we can compare afterwards in the Data Recollection Evaluation.
 
 \section{Prescriptive Digital Twin Flow}
 
