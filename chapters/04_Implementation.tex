@@ -1,6 +1,67 @@
 \chapter{Implementation}
 \label{sec:implementation}
 
+	% •	Realize the design: give technical detail on what was actually implemented
+	% •	Be more practical and objective (e.g., code structure, wiring, services)
+	% •	Report what worked, what didn’t (e.g., speed scaling issue), and why
+	% •	Clarify how data were collected, labeled, and used in the twin
+	% •	Include figures, screenshots, command snippets, JSON logs if relevant
+\section{System Architecture}
+% Describe physical setup and components
+The complete architecture of the Cotton Candy Digital Twin system, including sensor integration, edge computing via the Raspberry Pi, and data forwarding to the lab server, is illustrated in Figure~\ref{fig:ccdt-architecture}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/Architecture of the CC DT.png}
+    \caption{Full system architecture of the Cotton Candy Digital Twin, showing sensor integration, Raspberry Pi services, SSH-tunneled data flow, and cloud-based processing.}
+    \label{fig:ccdt-architecture}
+\end{figure}
+
+\begin{itemize}
+  \item Cotton Candy Machine (RCZK-1030-W)
+  \item UR5e Robot Arm + Gripper
+  \item Custom 3D-printed parts (cite CAD)
+  \item Overall process overview (from sugar fill to cotton candy placement)
+\end{itemize}
+
+\section{Sensor Integration}
+% Describe types, placement, purpose
+\begin{itemize}
+  \item Temperature \& Humidity Sensors (HDC3021, IR)
+  \item Multiplexer setup (TCA9548A)
+  \item Edge device: Orange Pi Zero 2W
+  \item MQTT-based data forwarding
+\end{itemize}
+
+\section{Process Orchestration via CPEE}
+% How the robot and machine steps are modelled
+\begin{itemize}
+  \item Overview of CPEE workflows (Model Screenshot)
+  \item Services defined for robot actions (e.g., fill spoon, rotate stick)
+  \item Integration with HTTP and MQTT
+\end{itemize}
+
+\subsection{Limitations in Speed Parameterization}
+% Your paragraph about robot speed control
+% Why speed was excluded, how UR controller scaled it down
+\section{Data Collection Pipeline}
+% Where you log data and what gets captured
+\begin{itemize}
+  \item Environment registry service
+  \item Process instance UUID mapping
+  \item Storage format (e.g., YAML, JSON, CSV, MQTT logs)
+\end{itemize}
+
+\section{Digital Twin Model Construction}
+% ML model used, how trained
+\begin{itemize}
+  \item Feature selection and preprocessing
+  \item Target variables
+  \item Model used (e.g., Random Forest)
+  \item Tools \& libraries
+\end{itemize}
+
+
 \section{Starting Automata v0}
 TODO What we learned when we created the automata and the simple function that we are gonna use for data collection.
 \subsection{Its Parameters/Features}
@@ -199,7 +260,7 @@ Did we use RandomForest or Decision Tree or Regression?
 
 
 
-\section{Automata v3 Our first Digital Twin}
+\section{Automata v3 - Our first Digital Twin}
 What is different in the implementation? Basically now we have a service with a model. In the next chapter we are gonna evaluate this final version with the v0 automata.
 
 \subsection{Prescription Part (No time)}
@@ -207,7 +268,7 @@ What is different in the implementation? Basically now we have a service with a 
 
 
 \section{Pressure Functions}
-Here I want to briefly show the pressure funcs we get from the scale and our implemented function, and why we decided not to use them (spoiler: To little time)
+Here I want to briefly show the pressure funcs we get from the scale and our implemented function, and why we decided not to use them (spoiler: to little time)
 
 
 \section{Product Quality Measurement}
